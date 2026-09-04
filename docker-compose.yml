@@ -1,6 +1,8 @@
 services:
   app:
-    image: ghcr.io/gsync/jobsync:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: jobsync_app
     ports:
       - "3737:3737"

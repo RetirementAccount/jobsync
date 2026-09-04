@@ -19,6 +19,7 @@ export const updateJobStatus = async (
             applied: true,
             appliedDate: new Date(),
           };
+        case "screening":
         case "interview":
           return {
             statusId: status.id,

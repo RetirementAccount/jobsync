@@ -252,7 +252,9 @@ export const JOB_SOURCES = [
 export const JOB_STATUSES = [
   { label: "New", value: "new" },
   { label: "Draft", value: "draft" },
+  { label: "Researching", value: "researching" },
   { label: "Applied", value: "applied" },
+  { label: "Screening", value: "screening" },
   { label: "Interview", value: "interview" },
   { label: "Offer", value: "offer" },
   { label: "Rejected", value: "rejected" },

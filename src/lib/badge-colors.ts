@@ -21,7 +21,9 @@ type JobStatusValue = (typeof JOB_STATUSES)[number]["value"];
 export const JOB_STATUS_BADGE_COLORS: Record<JobStatusValue, BadgeColor> = {
   new: "teal",
   draft: "slate",
+  researching: "teal",
   applied: "blue",
+  screening: "amber",
   interview: "violet",
   offer: "emerald",
   rejected: "red",
