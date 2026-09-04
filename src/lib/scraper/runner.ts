@@ -67,6 +67,8 @@ function getDefaultModelForProvider(provider: AiProvider): string {
       return GeminiModel.GEMINI_2_0_FLASH;
     case AiProvider.OPENROUTER:
       return "anthropic/claude-3.5-sonnet";
+    case AiProvider.ANTHROPIC:
+      return "claude-3-5-sonnet-latest";
   }
 }
 
