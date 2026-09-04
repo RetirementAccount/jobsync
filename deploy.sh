@@ -61,10 +61,10 @@ git pull origin "$BRANCH"
 echo -e "${GREEN}[4/5]${NC} Stopping existing containers..."
 $COMPOSE_CMD down
 
-# Pull latest images and start containers
-echo -e "${GREEN}[5/5]${NC} Pulling latest images and starting containers..."
-$COMPOSE_CMD pull
-$COMPOSE_CMD up -d --force-recreate
+# Rebuild from source and start containers (compose builds locally now
+# that the app is customized, rather than pulling the upstream image)
+echo -e "${GREEN}[5/5]${NC} Building image and starting containers..."
+$COMPOSE_CMD up -d --build --force-recreate
 
 # Poll the app until it actually responds, so the success message below only
 # prints once the app is reachable in a browser — not just "container started".
